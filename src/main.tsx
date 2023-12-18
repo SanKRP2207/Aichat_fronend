@@ -6,6 +6,12 @@ import { createTheme } from '@mui/material';
 import { ThemeProvider } from '@emotion/react';
 import { BrowserRouter } from 'react-router-dom'
 import { AuthProvider } from '../src/components/context/AuthContext.tsx'
+import { Toaster } from 'react-hot-toast';
+import axios from 'axios';
+axios.defaults.baseURL = "http://localhost:8000/api/v1";
+axios.defaults.withCredentials = true;
+
+
 
 
 const theme = createTheme({
@@ -20,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <AuthProvider>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
+          <Toaster position= "top-right" />
           <App />
         </ThemeProvider>
       </BrowserRouter>

@@ -28,6 +28,7 @@ const Logo = () => {
             }}>
                 <span style={{ fontSize: '20px' }}>MERN</span>-GPT
             </Typography>
+            
         </div>
     );
 };
